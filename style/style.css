@@ -113,6 +113,7 @@ nav ul li a:hover::before {
    BANNER PRINCIPAL
 --------------------------------- */
 .banner {
+  height: 500px;
   text-align: center;
   margin-top: 100px;
   color: #333;

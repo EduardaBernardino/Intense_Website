@@ -1,0 +1,64 @@
+body {
+  font-family: 'Georgia', serif;
+  background-color: #fff;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.depoimentos {
+  padding: 60px 20px;
+}
+.depoimento{
+    text-align: justify;
+}
+.depoimentos h2 {
+  font-size: 48px;
+  margin-bottom: 40px;
+  border-bottom: 3px solid #c5b358;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.card {
+  text-align: justify;
+  flex: 1 1 250px;
+  max-width: 280px;
+  background: transparent;
+  padding: 10px;
+  text-align: left;
+  color: #000;
+}
+
+.estrelas {
+  color: #c5b358;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.autor {
+  font-weight: bold;
+  color: #000;
+  margin-top: 10px;
+}
+
+.comentario {
+  margin-top: 40px;
+}
+
+.comentario a {
+  color: #c5b358;
+  text-decoration: none;
+  border-bottom: 2px solid #c5b358;
+  padding-bottom: 3px;
+}

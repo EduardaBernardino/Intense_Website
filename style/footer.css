@@ -1,0 +1,54 @@
+footer {
+  background-color: #7c5a59;
+  color: white;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section.logo img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.footer-section.logo p {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.footer-section.social div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.footer-section.social img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.footer-section.horario h4,
+.footer-section.localizacao h4 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-section.horario p,
+.footer-section.localizacao p {
+  font-size: 14px;
+  line-height: 1.6;
+}
