@@ -34,6 +34,8 @@ body {
   width: 100%;
   padding: 10px 40px; /* Padding geral para o cabeçalho */
   margin-top: -50px;
+
+
 }
 
 
@@ -148,4 +150,49 @@ nav ul li a:hover::before {
 
 .btn-consulta:hover {
   background-color: #7a4e4e;
+}
+
+
+.capa {
+  display: flex;
+  justify-content: center; /* Centraliza na horizontal */
+  align-items: center;     /* Centraliza na vertical */
+  height: 350px;
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+}
+
+
+#secao {
+  height: 900px;
+  padding: 40px;
+}
+
+.conteudo {
+  display: flex;
+  align-items: center;
+  text-align: justify ;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap; /* Garante que funcione bem em telas pequenas */
+}
+
+.conteudo p {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 50%;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+
+}
+
+.conteudo video {
+  flex: 1;
+  max-width: 45%;
+  height: auto;
+  border-radius: 10px;
 }
