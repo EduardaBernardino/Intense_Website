@@ -159,7 +159,7 @@ nav ul li a:hover::before {
   align-items: center;     /* Centraliza na vertical */
   height: 350px;
   font-family: 'Playfair Display', serif;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 500;
   color: #333;
   text-align: center;
@@ -167,8 +167,8 @@ nav ul li a:hover::before {
 
 
 #secao {
-  height: 900px;
-  padding: 40px;
+  height: 1000px;
+  padding: 140px;
 }
 
 .conteudo {
@@ -184,7 +184,7 @@ nav ul li a:hover::before {
   flex: 1;
   font-size: 18px;
   line-height: 1.6;
-  max-width: 50%;
+  max-width: 60%;
   font-family: 'Playfair Display', serif;
   font-weight: bold;
 
@@ -192,7 +192,9 @@ nav ul li a:hover::before {
 
 .conteudo video {
   flex: 1;
-  max-width: 45%;
+  max-width: 21%;
   height: auto;
   border-radius: 10px;
 }
+
+
