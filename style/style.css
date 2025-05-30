@@ -198,3 +198,90 @@ nav ul li a:hover::before {
 }
 
 
+.avaliacao-frame {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: -100px; /* Para sobrepor o rodapé */
+  z-index: 10; /* Para garantir que fique acima do rodapé */
+}
+
+.avaliacao-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Imagem do consultório */
+.avaliacao-img {
+  max-width: 500px; /* Limita a largura máxima */
+  width: 100%;      /* Faz com que a imagem seja responsiva */
+  height: auto;     /* Mantém a proporção */
+  border-radius: 10px;
+  display: block;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  opacity: 0.9;
+}
+
+
+.avaliacao-botao {
+  position: absolute;
+  bottom: 80px;  /* Ajuste para subir ou descer */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #65342c;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+
+.avaliacao-botao:hover {
+  background-color: #7a4e4e;
+}
+
+/* ------------------------------
+   FOOTER
+--------------------------------- */
+.footer-container {
+  background-color: #7e5b5b;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding:20px;
+  margin-top: 90px;
+  gap: 30px;
+}
+
+.footer-section {
+  max-width: 250px;
+}
+
+.footer-section.logo img {
+  max-width: 150px;
+  margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section h4 {
+  margin-bottom: 10px;
+}
+
+.footer-section.social div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-section.social img {
+  width: 30px;
+}
+
+.footer-section iframe {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
