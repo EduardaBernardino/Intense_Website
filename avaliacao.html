@@ -1,22 +1,38 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avaliação</title>
     <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/avaliacao.css">
-
 </head>
 <body>
+    <header>
+        <div class="header-content">
+            <nav>
+                <ul class="menu">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="profissionais.html">Profissionais</a></li>
+                    <li><a href="tratamentos.html">Tratamentos</a></li>
+                    <li><a href="depoimentos.html">Depoimentos</a></li>
+                    <li><a href="avaliacao.html" class="botao">Faça uma avaliação</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <div class="container">
-    <h2>Faça a sua Avaliação</h2><br>
-<form>
-    <input type="text" placeholder="Nome:" class="bloco">
-    <input type="tel" placeholder="Telefone:" class="bloco">
-    <input type="email" placeholder="Email:" class="bloco">
-    <textarea placeholder="Envie sua mensagem" class="bloco"></textarea>
-</form>
-</div>
+        <h2>Faça a sua Avaliação</h2><br>
+        <form action="enviado.html" method="get">
+            <input type="text" placeholder="Nome:" class="bloco" required>
+            <input type="tel" placeholder="Telefone:" class="bloco" required>
+            <input type="email" placeholder="Email:" class="bloco" required>
+            <textarea placeholder="Envie sua mensagem" class="bloco" required></textarea>
+            <button type="submit" class="enviar-btn">ENVIAR</button>
+        </form>
+    </div>
 </body>
 </html>
