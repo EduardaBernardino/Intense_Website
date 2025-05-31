@@ -285,3 +285,20 @@ nav ul li a:hover::before {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
+
+
+.ucb-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  font-size: 16px;
+  font-family: 'Playfair Display', serif;
+  color: white;
+}
+
+.ucb-info img {
+  width: 40px; /* ou ajuste como preferir */
+  height: auto;
+  border-radius: 5px;
+}
