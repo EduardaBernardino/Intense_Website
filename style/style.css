@@ -770,3 +770,94 @@ nav ul li a:hover::before {
     padding: 0 1rem;
   }
 }
+/* --- Estilos para o Menu Hambúrguer --- */
+
+/* Esconde a caixa de seleção (será usada apenas para controle de estado) */
+.menu-toggle {
+  display: none;
+}
+
+/* O ícone do menu (label) é escondido por padrão em telas maiores */
+.menu-icon {
+  display: none;
+}
+
+
+/* ---- Celular (até 768px) ---- */
+@media (max-width: 768px) {
+
+  /* Alinha o logo à esquerda e o ícone à direita */
+  .header-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: relative; /* Necessário para o posicionamento do menu dropdown */
+  }
+
+  /*
+   * Estilos para o menu dropdown
+   */
+  header nav {
+    display: none; /* Menu escondido por padrão */
+    position: absolute;
+    top: 100%; /* Posiciona o menu logo abaixo do cabeçalho */
+    left: 0;
+    width: 100%;
+    background-color: #ffffff; /* Fundo branco para o menu */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para destaque */
+  }
+
+  header nav ul, .menu {
+    flex-direction: column; /* Itens do menu empilhados verticalmente */
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  header nav ul li a {
+    padding: 1rem;
+    width: 100%;
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  header nav ul li:last-child a {
+    border-bottom: none;
+  }
+
+  /* Estilos para o ícone do menu (3 barrinhas) */
+  .menu-icon {
+    display: flex; /* Mostra o ícone em telas pequenas */
+    flex-direction: column;
+    gap: 5px; /* Espaço entre as barras */
+    cursor: pointer;
+  }
+
+  .menu-icon span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #333333; /* Cor das barras */
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* * A MÁGICA ACONTECE AQUI:
+   * Quando a caixa de seleção está marcada (clicada),
+   * o menu de navegação (nav) que é seu "irmão" no HTML se torna visível.
+   */
+  .menu-toggle:checked ~ nav {
+    display: block;
+  }
+
+  /* Animação opcional: transforma o ícone em um "X" quando o menu está aberto */
+  .menu-toggle:checked ~ .menu-icon span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .menu-toggle:checked ~ .menu-icon span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle:checked ~ .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+}
