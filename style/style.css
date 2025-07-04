@@ -302,3 +302,413 @@ nav ul li a:hover::before {
   height: auto;
   border-radius: 5px;
 }
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Tablet (max-width: 1024px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+    /* Global Adjustments */
+    body {
+        padding: 15px; /* Adjust general body padding */
+    }
+
+    /* Header */
+    header .header-content {
+        padding: 15px 20px;
+        flex-direction: column; /* Stack logo and menu */
+        gap: 20px;
+        align-items: center;
+    }
+
+    .logo img {
+        max-width: 200px; /* Adjust logo size */
+    }
+
+    nav ul {
+        flex-wrap: wrap; /* Allow menu items to wrap */
+        justify-content: center; /* Center menu items */
+        gap: 25px;
+        margin-top: 0; /* Reset margin from desktop style */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Slightly reduce font size */
+    }
+
+    .botao {
+        padding: 8px 18px; /* Adjust button padding */
+    }
+
+    /* Index.html - Banner */
+    .banner {
+        height: auto; /* Adjust height for content */
+        padding: 40px 20px;
+        margin-top: 50px;
+    }
+
+    .banner h2 {
+        font-size: 48px; /* Reduce banner font size */
+        line-height: 1.3;
+    }
+
+    .btn-consulta {
+        padding: 15px 60px; /* Reduce button padding */
+        font-size: 15px;
+    }
+
+    /* Index.html - Seção Conheça a Clínica */
+    #secao {
+        padding: 80px 20px; /* Adjust section padding */
+        height: auto; /* Allow height to adjust to content */
+    }
+
+    .capa h2 {
+        font-size: 32px; /* Reduce title font size */
+    }
+
+    .conteudo {
+        flex-direction: column; /* Stack text and video */
+        gap: 30px;
+    }
+
+    .conteudo p {
+        max-width: 100%; /* Take full width */
+        font-size: 16px;
+        text-align: center; /* Center text */
+    }
+
+    .conteudo video {
+        max-width: 80%; /* Adjust video width */
+        margin: 0 auto; /* Center video */
+    }
+
+    /* Index.html - Avaliação Frame */
+    .avaliacao-frame {
+        margin-top: 20px;
+        margin-bottom: -50px; /* Adjust overlap with footer */
+    }
+
+    .avaliacao-img {
+        max-width: 400px; /* Adjust image size */
+    }
+
+    .avaliacao-botao {
+        bottom: 50px; /* Adjust button position */
+        padding: 8px 15px;
+    }
+
+    /* Sobre.html - Seção Sobre Nós */
+    #sobre {
+        padding: 40px 20px; /* Adjust section padding */
+    }
+
+    .subtitulo {
+        font-size: 1rem; /* Adjust subtitle font size */
+        margin-bottom: 20px;
+    }
+
+    .sessao-conteudo {
+        flex-direction: column; /* Stack image and text */
+        gap: 30px;
+        align-items: center; /* Center content */
+    }
+
+    .imagemSobre img {
+        max-width: 100%; /* Ensure image takes full width */
+        height: auto;
+    }
+
+    .textoSobre {
+        max-width: 100%; /* Ensure text takes full width */
+        text-align: center; /* Center text */
+    }
+
+    .textoSobre .titulo {
+        font-size: 2rem; /* Adjust title font size */
+        margin-bottom: 15px;
+    }
+
+    .textoSobre p {
+        font-size: 1rem; /* Adjust paragraph font size */
+    }
+
+    /* Profissionais.html - Cards */
+    .profissionais .titulo {
+        font-size: 40px; /* Adjust title font size */
+        letter-spacing: 3px;
+    }
+
+    .container-cards {
+        gap: 30px; /* Adjust gap between cards */
+        grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+    }
+
+    .card-usuario {
+        width: 180px; /* Adjust card width */
+        height: auto; /* Allow height to adjust */
+        padding: 20px;
+    }
+
+    /* Tratamentos.html - Grid de Tratamentos */
+    .tratamentos .titulo {
+        font-size: 40px; /* Adjust title font size */
+        letter-spacing: 3px;
+    }
+
+    .grid-tratamentos {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+        gap: 30px 40px;
+    }
+
+    .card {
+        width: 150px; /* Adjust card width */
+        height: 130px; /* Adjust card height */
+    }
+
+    .card-front, .card-back {
+        font-size: 11px; /* Adjust font size within cards */
+    }
+
+    /* Depoimentos.html - Cards */
+    .depoimentos h2 {
+        font-size: 40px; /* Adjust title font size */
+    }
+
+    .cards {
+        flex-direction: column; /* Stack testimonials */
+        align-items: center; /* Center cards */
+        gap: 20px;
+    }
+
+    .card {
+        max-width: 90%; /* Adjust card width */
+        font-size: 0.95rem;
+    }
+
+    /* Avaliacao.html - Form */
+    .container h2 {
+        font-size: 32px; /* Adjust title font size */
+    }
+
+    .bloco {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .enviar-btn {
+        width: 200px; /* Adjust button width */
+        padding: 8px;
+        font-size: 15px;
+    }
+
+    /* Enviado.html - Mensagem */
+    .mensagem {
+        font-size: 32px; /* Adjust message font size */
+    }
+
+    /* Footer */
+    footer .footer-container {
+        flex-direction: column; /* Stack footer sections */
+        align-items: center; /* Center content */
+        gap: 30px;
+        padding: 30px 20px;
+    }
+
+    .footer-section {
+        max-width: 100%; /* Take full width */
+        text-align: center; /* Center text */
+    }
+
+    .footer-section.social div {
+        justify-content: center; /* Center social icons */
+    }
+
+    .footer-section.horario p,
+    .footer-section.localizacao p {
+        font-size: 13px;
+    }
+
+    .footer-section iframe {
+        width: 100%; /* Ensure map takes full width */
+        max-width: 300px;
+        height: 120px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile (max-width: 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    /* Global Adjustments */
+    body {
+        padding: 10px;
+    }
+
+    /* Header */
+    header .header-content {
+        padding: 10px 10px;
+        gap: 15px;
+    }
+
+    .logo img {
+        max-width: 150px; /* Further reduce logo size */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+        gap: 15px;
+    }
+
+    nav ul li a {
+        font-size: 14px; /* Further reduce font size */
+    }
+
+    .botao {
+        padding: 6px 12px; /* Further adjust button padding */
+        font-size: 14px;
+    }
+
+    /* Index.html - Banner */
+    .banner {
+        padding: 30px 15px;
+        margin-top: 30px;
+    }
+
+    .banner h2 {
+        font-size: 32px; /* Significantly reduce banner font size */
+    }
+
+    .btn-consulta {
+        padding: 12px 40px; /* Significantly reduce button padding */
+        font-size: 14px;
+    }
+
+    /* Index.html - Seção Conheça a Clínica */
+    #secao {
+        padding: 60px 15px;
+    }
+
+    .capa h2 {
+        font-size: 24px;
+    }
+
+    .conteudo video {
+        max-width: 100%; /* Ensure video takes full width on mobile */
+    }
+
+    /* Index.html - Avaliação Frame */
+    .avaliacao-frame {
+        margin-top: 10px;
+        margin-bottom: -30px;
+    }
+
+    .avaliacao-img {
+        max-width: 300px;
+    }
+
+    .avaliacao-botao {
+        bottom: 30px;
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+
+    /* Sobre.html - Seção Sobre Nós */
+    #sobre {
+        padding: 30px 15px;
+    }
+
+    .textoSobre .titulo {
+        font-size: 1.5rem;
+    }
+
+    .textoSobre p {
+        font-size: 0.9rem;
+    }
+
+    /* Profissionais.html - Cards */
+    .profissionais .titulo {
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+
+    .container-cards {
+        flex-direction: column; /* Stack cards into a single column */
+        gap: 20px;
+    }
+
+    .card-usuario {
+        width: 250px; /* Set a fixed width for mobile cards */
+        height: auto;
+    }
+
+    /* Tratamentos.html - Grid de Tratamentos */
+    .tratamentos .titulo {
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+
+    .grid-tratamentos {
+        grid-template-columns: 1fr; /* Single column for mobile */
+        gap: 20px;
+    }
+
+    .card {
+        width: 180px; /* Adjust card width for single column */
+        height: 150px;
+    }
+
+    .card-front, .card-back {
+        font-size: 12px;
+    }
+
+    /* Depoimentos.html - Cards */
+    .depoimentos h2 {
+        font-size: 32px;
+    }
+
+    /* Avaliacao.html - Form */
+    .container h2 {
+        font-size: 24px;
+    }
+
+    .bloco {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .enviar-btn {
+        width: 180px;
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    /* Enviado.html - Mensagem */
+    .mensagem {
+        font-size: 24px;
+    }
+
+    /* Footer */
+    footer .footer-container {
+        padding: 20px 15px;
+        gap: 20px;
+    }
+
+    .footer-section.logo img {
+        max-width: 100px;
+    }
+
+    .footer-section p, .footer-section h4 {
+        font-size: 12px;
+    }
+
+    .footer-section.social img {
+        width: 25px;
+    }
+
+    .footer-section iframe {
+        height: 100px;
+    }
+}
