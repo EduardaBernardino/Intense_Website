@@ -1,0 +1,151 @@
+/* =================================================================== */
+/* ARQUIVO CSS MESTRE FINAL - BASEADO NO "SOBRE NÓS"               */
+/* =================================================================== */
+
+/* --- ESTILO BASE DO CABEÇALHO (DESKTOP) --- */
+
+/* Estilo do container principal do cabeçalho */
+header {
+  width: 100%;
+  background: none;
+  padding: 0;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Centraliza o conteúdo (logo e menu juntos) e define o espaçamento vertical */
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 27px 0;
+  gap: 35px; /* Espaço entre a logo e o menu */
+}
+
+/* Estilos da Navegação */
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 35px; /* Espaço entre os itens do menu */
+}
+
+nav ul li a {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-size: 17px; /* Mantemos o tamanho ajustado para evitar quebras */
+  color: #333333;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+}
+
+/* Efeito de hover nos links do menu */
+nav ul li a::after,
+nav ul li a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, saddlebrown, #5d3b3b);
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.4s ease-out;
+}
+nav ul li a::after {
+  bottom: -5px;
+  transform-origin: right;
+}
+nav ul li a::before {
+  top: -5px;
+  transform-origin: left;
+}
+nav ul li a:hover::after,
+nav ul li a:hover::before {
+  transform: scaleX(1);
+}
+
+/* Controle de tamanho da Logo */
+.header-content .logo img {
+  max-width: 180px;
+  height: auto;
+  display: block;
+}
+
+/* Esconde os elementos do menu mobile por padrão */
+.menu-toggle,
+.menu-icon {
+  display: none;
+}
+
+/* --- SEÇÃO RESPONSIVA (MENU MOBILE) --- */
+@media (max-width: 1024px) { /* Ajuste para tablets */
+    .header-content {
+        flex-direction: column;
+        padding: 20px;
+    }
+}
+
+
+@media (max-width: 768px) {
+  /* No mobile, alinhamos a logo e o ícone nas pontas */
+  .header-content {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 20px;
+  }
+
+  /* Esconde a navegação normal de desktop */
+  header nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  /* Ajusta o menu para o formato dropdown */
+  header nav ul, .menu {
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 0;
+    gap: 0;
+  }
+
+  header nav ul li a {
+    padding: 1rem;
+    width: 100%;
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  header nav ul li:last-child a {
+    border-bottom: none;
+  }
+
+  /* Mostra e estiliza o ícone do menu hambúrguer */
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .menu-icon span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #333333;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Lógica para mostrar o menu ao clicar no ícone */
+  .menu-toggle:checked ~ nav {
+    display: block;
+  }
+}

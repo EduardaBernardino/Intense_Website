@@ -1,74 +1,4 @@
-.header-content {
-  display: flex;
-  justify-content: center; /* Centraliza o conteúdo */
-  width: 100%;
-  padding: 27px 0;
-}
 
-.menu {
-  display: flex;
-  gap: 35px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 35px;
-  justify-content: center; /* Garante centralização */
-}
-
-nav {
-  width: 100%;
-  text-align: center;
-}
-
-
-nav ul li {
-  margin: 0; 
-}
-
-nav ul li a {
-  font-family: "Special Gothic Expanded One", sans-serif;
-  font-size: 18px;
-  color: #333333;
-  text-decoration: none;
-  position: relative;
-  font-weight: bold;
-  display: inline-block;
-}
-
-
-nav ul li a::after,
-nav ul li a::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(to right, saddlebrown, #5d3b3b);
-  left: 0;
-  transform: scaleX(0);
-  transition: transform 0.4s ease-out;
-}
-
-nav ul li a::after {
-  bottom: -5px;
-  transform-origin: right;
-}
-
-nav ul li a::before {
-  top: -5px;
-  transform-origin: left;
-}
-
-nav ul li a:hover::after,
-nav ul li a:hover::before {
-  transform: scaleX(1);
-}
 
 
 
@@ -96,4 +26,81 @@ body {
   font-family: 'Playfair Display', serif;
   font-weight: 600;
   text-align: center;
+}
+/* --- Estilos para o Menu Hambúrguer --- */
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+  }
+
+  header nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  header nav ul, .menu {
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 0;
+    gap: 0; /* Remove o gap para o menu dropdown */
+  }
+
+  header nav ul li a {
+    padding: 1rem;
+    width: 100%;
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  header nav ul li:last-child a {
+    border-bottom: none;
+  }
+
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .menu-icon span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #333333;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu-toggle:checked ~ nav {
+    display: block;
+  }
+
+  .menu-toggle:checked ~ .menu-icon span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .menu-toggle:checked ~ .menu-icon span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle:checked ~ .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
 }
