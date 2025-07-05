@@ -1,863 +1,260 @@
-/* RESET GERAL */
+/* style/main.css */
+
+/* Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* ------------------------------
-   ESTILO GERAL DO SITE
---------------------------------- */
+/* Fundo e fonte GERAL para o site */
 body {
-  font-family: sans-serif;
-  background: url('../images/fundo.png') no-repeat center center fixed;
-  background-size: cover;
+    font-family: sans-serif;
+    background: url('../images/fundo.png') no-repeat center center fixed;
+    background-size: cover;
+    color: black; /* Cor do texto padrão para o site */
+    min-height: 100vh;
 }
 
-/* ------------------------------
-   LOGO (imagem + h1)
---------------------------------- */
-.logo img {
-  max-width: 250px;
-  height: auto;
-}
-
-
-
-/* ------------------------------
-   HEADER (logo + título + menu)
---------------------------------- */
+/* Cabeçalho */
 .header-content {
-  display: flex;
-  align-items: center;
-  gap: 45px; /* Espaço entre a logo e o menu */
-  width: 100%;
-  padding: 10px 40px; /* Padding geral para o cabeçalho */
-  margin-top: -50px;
-
-
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Mantém logo esquerda, menu direita */
+    padding: 10px 40px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o conteúdo do cabeçalho */
+    /* REMOVA margin-top: -50px; daqui se houver */
 }
 
-
-/* ------------------------------
-   TÍTULO CENTRAL NO HEADER
---------------------------------- */
-.titulo {
-  flex: 1;
-  text-align: center;
-  color: #222;
+.logo img {
+    max-width: 250px;
+    height: auto;
 }
 
-.titulo h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;
-  line-height: 1.2;
-  color: #222;
-}
-
-/* ------------------------------
-   MENU DE NAVEGAÇÃO
---------------------------------- */
+/* Menu de Navegação */
 nav ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 35px; /* Espaço entre os itens individuais do menu */
-  margin-top: -50px;
-}
-
-nav ul li {
-  margin: 0; /* Remova qualquer margem individual que possa atrapalhar o gap */
+    display: flex;
+    list-style: none;
+    gap: 35px;
+    margin: 0; /* Garante que não tenha margem negativa */
+    padding: 0;
+    /* REMOVA margin-top: -50px; daqui se houver */
 }
 
 nav ul li a {
-  font-family: "Special Gothic Expanded One", sans-serif;
-  font-size: 18px;
-  color: #333333;
-  text-decoration: none;
-  position: relative;
-  font-weight: bold;
-  display: inline-block;
+    font-family: "Special Gothic Expanded One", sans-serif; /* Mantenha essa fonte se for a global do menu */
+    font-size: 18px;
+    color: #333333;
+    text-decoration: none;
+    position: relative;
+    font-weight: bold;
+    display: inline-block;
 }
 
-/* NOVO ESTILO DE HOVER COM DUAS LINHAS */
+/* NOVO ESTILO DE HOVER COM DUAS LINHAS (Se for para todo o site) */
 nav ul li a::after,
 nav ul li a::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(to right, saddlebrown, #5d3b3b);
-  left: 0;
-  transform: scaleX(0);
-  transition: transform 0.4s ease-out;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, saddlebrown, #5d3b3b);
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.4s ease-out;
 }
 
 nav ul li a::after {
-  bottom: -5px;
-  transform-origin: right;
+    bottom: -5px;
+    transform-origin: right;
 }
 
 nav ul li a::before {
-  top: -5px;
-  transform-origin: left;
+    top: -5px;
+    transform-origin: left;
 }
 
 nav ul li a:hover::after,
 nav ul li a:hover::before {
-  transform: scaleX(1);
+    transform: scaleX(1);
 }
 
-/* OBS: ".menu" parece duplicado ou não está sendo usado. Removido para evitar conflito */
-
-/* ------------------------------
-   BANNER PRINCIPAL
---------------------------------- */
-.banner {
-  height: 500px;
-  text-align: center;
-  margin-top: 100px;
-  color: #333;
-  margin-top: 20px;
+/* Título centralizado (se for um estilo para TODOS os títulos de página) */
+.titulo-pagina {
+    text-align: center;
+    margin-top: 40px;
 }
 
-.banner h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 60px;
-  font-weight: 500;
-  color: #333;
-  padding: 10px 20px;
-  border-radius: 10px;
-  display: inline-block;
+.titulo-pagina h2 {
+    font-family: 'Italiana', serif;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-/* ------------------------------
-   BOTÃO "FAZER CONSULTA"
---------------------------------- */
-.btn-consulta {
-  margin-top: 30px;
-  display: inline-block;
-  background-color: #5d3b3b;
-  color: #fff;
-  padding: 20px 100px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  text-decoration: none;
-  cursor: pointer;
-}
+/* --- Media Queries GERAIS para Responsividade (copie as regras unificadas que funcionam para todas as páginas) --- */
 
-.btn-consulta:hover {
-  background-color: #7a4e4e;
-}
-
-
-.capa {
-  display: flex;
-  justify-content: center; /* Centraliza na horizontal */
-  align-items: center;     /* Centraliza na vertical */
-  height: 350px;
-  font-family: 'Playfair Display', serif;
-  font-size: 40px;
-  font-weight: 500;
-  color: #333;
-  text-align: center;
-}
-
-
-#secao {
-  height: 1000px;
-  padding: 140px;
-}
-
-.conteudo {
-  display: flex;
-  align-items: center;
-  text-align: justify ;
-  justify-content: space-between;
-  gap: 40px;
-  flex-wrap: wrap; /* Garante que funcione bem em telas pequenas */
-}
-
-.conteudo p {
-  flex: 1;
-  font-size: 18px;
-  line-height: 1.6;
-  max-width: 60%;
-  font-family: 'Playfair Display', serif;
-  font-weight: bold;
-
-}
-
-.conteudo video {
-  flex: 1;
-  max-width: 21%;
-  height: auto;
-  border-radius: 10px;
-}
-
-
-.avaliacao-frame {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-  margin-bottom: -100px; /* Para sobrepor o rodapé */
-  z-index: 10; /* Para garantir que fique acima do rodapé */
-}
-
-.avaliacao-container {
-  position: relative;
-  display: inline-block;
-}
-
-/* Imagem do consultório */
-.avaliacao-img {
-  max-width: 500px; /* Limita a largura máxima */
-  width: 100%;      /* Faz com que a imagem seja responsiva */
-  height: auto;     /* Mantém a proporção */
-  border-radius: 10px;
-  display: block;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  opacity: 0.9;
-}
-
-
-.avaliacao-botao {
-  position: absolute;
-  bottom: 80px;  /* Ajuste para subir ou descer */
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #65342c;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  transition: background-color 0.3s ease;
-}
-
-
-.avaliacao-botao:hover {
-  background-color: #7a4e4e;
-}
-
-/* ------------------------------
-   FOOTER
---------------------------------- */
-.footer-container {
-  background-color: #7e5b5b;
-  color: white;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding:20px;
-  margin-top: 90px;
-  gap: 30px;
-}
-
-.footer-section {
-  max-width: 250px;
-}
-
-.footer-section.logo img {
-  max-width: 150px;
-  margin-bottom: 10px;
-}
-
-.footer-section p, .footer-section h4 {
-  margin-bottom: 10px;
-}
-
-.footer-section.social div {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-.footer-section.social img {
-  width: 30px;
-}
-
-.footer-section iframe {
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-
-.ucb-info {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 20px;
-  font-size: 16px;
-  font-family: 'Playfair Display', serif;
-  color: white;
-}
-
-.ucb-info img {
-  width: 40px; /* ou ajuste como preferir */
-  height: auto;
-  border-radius: 5px;
-}
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
-
-/* --------------------------------------------------------------------------
-   Tablet (max-width: 1024px)
-   -------------------------------------------------------------------------- */
+/* ---- Tablet (até 1024px) ---- */
 @media (max-width: 1024px) {
-    /* Global Adjustments */
     body {
-        padding: 15px; /* Adjust general body padding */
+        font-size: 90%;
+        padding: 0 15px; /* Adiciona padding lateral para evitar que o conteúdo cole nas bordas */
     }
 
-    /* Header */
-    header .header-content {
+    .header-content {
         padding: 15px 20px;
-        flex-direction: column; /* Stack logo and menu */
+        flex-direction: column; /* Em tablets, pode empilhar logo e menu se preferir, ou manter lado a lado se houver espaço */
         gap: 20px;
         align-items: center;
     }
 
     .logo img {
-        max-width: 200px; /* Adjust logo size */
+        max-width: 200px;
     }
 
     nav ul {
-        flex-wrap: wrap; /* Allow menu items to wrap */
-        justify-content: center; /* Center menu items */
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 25px;
-        margin-top: 0; /* Reset margin from desktop style */
+        margin-top: 0;
     }
 
     nav ul li a {
-        font-size: 16px; /* Slightly reduce font size */
-    }
-
-    .botao {
-        padding: 8px 18px; /* Adjust button padding */
-    }
-
-    /* Index.html - Banner */
-    .banner {
-        height: auto; /* Adjust height for content */
-        padding: 40px 20px;
-        margin-top: 50px;
-    }
-
-    .banner h2 {
-        font-size: 48px; /* Reduce banner font size */
-        line-height: 1.3;
-    }
-
-    .btn-consulta {
-        padding: 15px 60px; /* Reduce button padding */
-        font-size: 15px;
-    }
-
-    /* Index.html - Seção Conheça a Clínica */
-    #secao {
-        padding: 80px 20px; /* Adjust section padding */
-        height: auto; /* Allow height to adjust to content */
-    }
-
-    .capa h2 {
-        font-size: 32px; /* Reduce title font size */
-    }
-
-    .conteudo {
-        flex-direction: column; /* Stack text and video */
-        gap: 30px;
-    }
-
-    .conteudo p {
-        max-width: 100%; /* Take full width */
         font-size: 16px;
-        text-align: center; /* Center text */
     }
 
-    .conteudo video {
-        max-width: 80%; /* Adjust video width */
-        margin: 0 auto; /* Center video */
-    }
-
-    /* Index.html - Avaliação Frame */
-    .avaliacao-frame {
-        margin-top: 20px;
-        margin-bottom: -50px; /* Adjust overlap with footer */
-    }
-
-    .avaliacao-img {
-        max-width: 400px; /* Adjust image size */
-    }
-
-    .avaliacao-botao {
-        bottom: 50px; /* Adjust button position */
-        padding: 8px 15px;
-    }
-
-    /* Sobre.html - Seção Sobre Nós */
-    #sobre {
-        padding: 40px 20px; /* Adjust section padding */
-    }
-
-    .subtitulo {
-        font-size: 1rem; /* Adjust subtitle font size */
-        margin-bottom: 20px;
-    }
-
-    .sessao-conteudo {
-        flex-direction: column; /* Stack image and text */
-        gap: 30px;
-        align-items: center; /* Center content */
-    }
-
-    .imagemSobre img {
-        max-width: 100%; /* Ensure image takes full width */
-        height: auto;
-    }
-
-    .textoSobre {
-        max-width: 100%; /* Ensure text takes full width */
-        text-align: center; /* Center text */
-    }
-
-    .textoSobre .titulo {
-        font-size: 2rem; /* Adjust title font size */
-        margin-bottom: 15px;
-    }
-
-    .textoSobre p {
-        font-size: 1rem; /* Adjust paragraph font size */
-    }
-
-    /* Profissionais.html - Cards */
-    .profissionais .titulo {
-        font-size: 40px; /* Adjust title font size */
-        letter-spacing: 3px;
-    }
-
-    .container-cards {
-        gap: 30px; /* Adjust gap between cards */
-        grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
-    }
-
-    .card-usuario {
-        width: 180px; /* Adjust card width */
-        height: auto; /* Allow height to adjust */
-        padding: 20px;
-    }
-
-    /* Tratamentos.html - Grid de Tratamentos */
-    .tratamentos .titulo {
-        font-size: 40px; /* Adjust title font size */
-        letter-spacing: 3px;
-    }
-
-    .grid-tratamentos {
-        grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
-        gap: 30px 40px;
-    }
-
-    .card {
-        width: 150px; /* Adjust card width */
-        height: 130px; /* Adjust card height */
-    }
-
-    .card-front, .card-back {
-        font-size: 11px; /* Adjust font size within cards */
-    }
-
-    /* Depoimentos.html - Cards */
-    .depoimentos h2 {
-        font-size: 40px; /* Adjust title font size */
-    }
-
-    .cards {
-        flex-direction: column; /* Stack testimonials */
-        align-items: center; /* Center cards */
-        gap: 20px;
-    }
-
-    .card {
-        max-width: 90%; /* Adjust card width */
-        font-size: 0.95rem;
-    }
-
-    /* Avaliacao.html - Form */
-    .container h2 {
-        font-size: 32px; /* Adjust title font size */
-    }
-
-    .bloco {
-        padding: 10px;
-        font-size: 15px;
-    }
-
-    .enviar-btn {
-        width: 200px; /* Adjust button width */
-        padding: 8px;
-        font-size: 15px;
-    }
-
-    /* Enviado.html - Mensagem */
-    .mensagem {
-        font-size: 32px; /* Adjust message font size */
-    }
-
-    /* Footer */
-    footer .footer-container {
-        flex-direction: column; /* Stack footer sections */
-        align-items: center; /* Center content */
-        gap: 30px;
-        padding: 30px 20px;
-    }
-
-    .footer-section {
-        max-width: 100%; /* Take full width */
-        text-align: center; /* Center text */
-    }
-
-    .footer-section.social div {
-        justify-content: center; /* Center social icons */
-    }
-
-    .footer-section.horario p,
-    .footer-section.localizacao p {
-        font-size: 13px;
-    }
-
-    .footer-section iframe {
-        width: 100%; /* Ensure map takes full width */
-        max-width: 300px;
-        height: 120px;
+    /* Outras regras gerais para tablet */
+    .container { /* ESTE AQUI PODE SER AJUSTADO EM AVALIACAO.CSS SE PRECISAR SER DIFERENTE */
+        padding: 0 2rem;
     }
 }
 
-/* --- Media Queries para Responsividade --- */
-
-/* ---- Tablet (até 1024px) ---- */
-@media (max-width: 1024px) {
-  /* Ajustes Gerais */
-  body {
-    /* Reduz a fonte base para escalar outros elementos em 'rem' */
-    font-size: 90%;
-  }
-
-  .container {
-    padding: 0 2rem; /* Adiciona espaçamento lateral */
-  }
-
-  /* Cabeçalho e Navegação */
-  .header-content {
-    /* Permite que o menu quebre para a próxima linha se não houver espaço */
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-    padding: 1.5rem;
-  }
-
-  nav ul,
-  .menu {
-    /* Reduz o espaçamento entre os itens do menu */
-    gap: 25px;
-    justify-content: center;
-    flex-wrap: wrap; /* Permite que o menu quebre em múltiplas linhas */
-  }
-
-  /* Seção "Conheça a Clínica" (index.html) */
-  #secao .conteudo {
-    flex-direction: column; /* Empilha o texto e o vídeo */
-    align-items: center;
-    gap: 2rem;
-  }
-
-  #secao .conteudo p,
-  #secao .conteudo video {
-    max-width: 100%; /* Garante que ambos ocupem a largura disponível */
-  }
-
-  /* Seção "Sobre Nós" (sobre.html) */
-  .sessao-conteudo {
-    flex-direction: column; /* Empilha a imagem e o texto */
-    align-items: center;
-    gap: 2rem;
-  }
-
-  /* Seção "Tratamentos" (tratamentos.html) */
-  .grid-tratamentos {
-    /* Ajusta o grid para 3 colunas */
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    padding: 0 2rem;
-  }
-
-  /* Seção "Depoimentos" (depoimentos.html) */
-  .depoimentos .cards {
-    /* Permite que os cards quebrem e se centralizem */
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-  }
-
-  /* Seção "Profissionais" (profissionais.html) */
-  .container-cards {
-    flex-direction: column; /* Empilha os cards dos profissionais */
-    align-items: center;
-    gap: 2.5rem;
-  }
-
-  .card-usuario {
-    width: 80%;
-    max-width: 500px; /* Limita a largura para melhor leitura */
-  }
-
-  /* Rodapé */
-  .footer-container {
-    /* Permite que as seções do rodapé quebrem */
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem 4rem; /* Adiciona espaçamento vertical e horizontal */
-  }
-
-  .footer-section {
-    /* Define uma base para que caibam 2 por linha */
-    flex-basis: 40%;
-    text-align: center;
-  }
-}
-
-/* ---- Celular (até 768px) ---- */
-@media (max-width: 768px) {
-  /* Ajustes Gerais */
-  .container {
-    padding: 0 1rem; /* Reduz o padding lateral para telas menores */
-  }
-
-  /* Cabeçalho e Navegação */
-  .header-content {
-    flex-direction: column; /* Empilha o logo e o menu verticalmente */
-    gap: 1.5rem;
-  }
-
-  nav ul,
-  .menu {
-    flex-direction: column; /* Empilha os itens do menu */
-    align-items: center;
-    gap: 1.25rem;
-  }
-
-  nav ul li a {
-    font-size: 1.1rem; /* Aumenta um pouco a fonte para facilitar o toque */
-  }
-
-  /* Banner (index.html) */
-  .banner {
-    padding: 3rem 1rem;
-    text-align: center;
-  }
-
-  .banner h2 {
-    font-size: 1.8rem;
-  }
-
-  .btn-consulta {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.9rem;
-  }
-
-  /* Seções de conteúdo genéricas */
-  #secao .capa h2,
-  .titulo {
-    font-size: 2rem; /* Reduz o tamanho dos títulos de seção */
-  }
-
-  .conteudo p,
-  .textoSobre p {
-    font-size: 1rem;
-    text-align: justify;
-  }
-
-  .conteudo video {
-    width: 100%; /* Garante que o vídeo seja responsivo */
-    height: auto;
-  }
-
-  /* Imagem e Botão (index.html) */
-  .avaliacao-container .avaliacao-botao {
-    font-size: 1rem;
-    padding: 12px 24px;
-    bottom: 15px; /* Ajusta a posição em telas menores */
-  }
-
-  /* Seção "Tratamentos" (tratamentos.html) */
-  .grid-tratamentos {
-    /* Muda o grid para uma única coluna */
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 0 1rem;
-  }
-
-  .card-front span,
-  .card-back span {
-    font-size: 0.95rem; /* Ajusta o texto dos cards */
-  }
-
-  /* Seção "Depoimentos" (depoimentos.html) */
-  .depoimentos h2 {
-    font-size: 2.5rem;
-  }
-
-  .depoimentos .cards {
-    flex-direction: column; /* Empilha os cards */
-    align-items: center;
-    gap: 2rem;
-  }
-
-  .card {
-    max-width: 100%;
-    flex-basis: auto;
-  }
-
-  /* Formulário de Avaliação (avaliacao.html) */
-  .container {
-    width: 100%;
-    margin: 20px auto;
-  }
-
-  .titulo {
-    font-size: 1.8rem;
-    letter-spacing: 3px;
-  }
-
-  /* Mensagem de Sucesso (enviado.html) */
-  .mensagem {
-    font-size: 1.75rem; /* Reduz o tamanho da fonte */
-    padding: 0 1rem;
-  }
-
-  /* Rodapé */
-  .footer-container {
-    flex-direction: column; /* Empilha todas as seções do rodapé */
-    align-items: center;
-    gap: 2rem;
-    text-align: center;
-  }
-
-  .footer-section {
-    flex-basis: 100%; /* Cada seção ocupa a largura total */
-    width: 100%;
-    align-items: center;
-  }
-
-  .footer-section.social {
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .footer-section.localizacao iframe {
-    width: 100%;
-    max-width: 300px; /* Limita a largura do mapa */
-    height: 200px;
-  }
-
-  footer > p {
-    text-align: center;
-    padding: 0 1rem;
-  }
-}
-/* --- Estilos para o Menu Hambúrguer --- */
-
+/* --- Estilos para o Menu Hambúrguer (COPIE ESTE BLOCO INTEIRO PARA O main.css se for geral) --- */
 /* Esconde a caixa de seleção (será usada apenas para controle de estado) */
 .menu-toggle {
-  display: none;
+    display: none;
 }
 
 /* O ícone do menu (label) é escondido por padrão em telas maiores */
 .menu-icon {
-  display: none;
+    display: none;
 }
-
 
 /* ---- Celular (até 768px) ---- */
 @media (max-width: 768px) {
+    /* Alinha o logo à esquerda e o ícone à direita */
+    .header-content {
+        flex-direction: row; /* Logo e hambúrguer lado a lado */
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        position: relative;
+    }
 
-  /* Alinha o logo à esquerda e o ícone à direita */
-  .header-content {
-    flex-direction: row;
+    header nav {
+        display: none; /* Menu escondido por padrão */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        z-index: 1000; /* Garante que o menu fique sobre outros elementos */
+    }
+
+    header nav ul, .menu {
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    header nav ul li a {
+        padding: 1rem;
+        width: 100%;
+        display: block;
+        text-align: center;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    header nav ul li:last-child a {
+        border-bottom: none;
+    }
+
+    .menu-icon {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .menu-icon span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #333333;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .menu-toggle:checked ~ nav {
+        display: block;
+    }
+
+    .menu-toggle:checked ~ .menu-icon span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .menu-toggle:checked ~ .menu-icon span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle:checked ~ .menu-icon span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    /* Outras regras gerais para celular */
+}
+
+/* Adicione aqui qualquer outro estilo GERAL do site que você tinha */
+
+/* --- Rodapé (se é o mesmo para todas as páginas) --- */
+.footer-container {
+    background-color: #7e5b5b;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    position: relative; /* Necessário para o posicionamento do menu dropdown */
-  }
+    padding:20px;
+    margin-top: 90px; /* Ajuste se necessário */
+    gap: 30px;
+}
 
-  /*
-   * Estilos para o menu dropdown
-   */
-  header nav {
-    display: none; /* Menu escondido por padrão */
-    position: absolute;
-    top: 100%; /* Posiciona o menu logo abaixo do cabeçalho */
-    left: 0;
-    width: 100%;
-    background-color: #ffffff; /* Fundo branco para o menu */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para destaque */
-  }
+/* ... (resto do seu footer CSS) ... */
 
-  header nav ul, .menu {
-    flex-direction: column; /* Itens do menu empilhados verticalmente */
-    width: 100%;
-    padding: 1rem 0;
-  }
+@media (max-width: 1024px) {
+    /* Ajustes específicos do footer para tablet */
+    .footer-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem 4rem;
+    }
 
-  header nav ul li a {
-    padding: 1rem;
-    width: 100%;
-    display: block;
-    text-align: center;
-    border-bottom: 1px solid #f0f0f0;
-  }
+    .footer-section {
+        flex-basis: 40%;
+        text-align: center;
+    }
+}
 
-  header nav ul li:last-child a {
-    border-bottom: none;
-  }
+@media (max-width: 768px) {
+    /* Ajustes específicos do footer para celular */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        text-align: center;
+    }
 
-  /* Estilos para o ícone do menu (3 barrinhas) */
-  .menu-icon {
-    display: flex; /* Mostra o ícone em telas pequenas */
-    flex-direction: column;
-    gap: 5px; /* Espaço entre as barras */
-    cursor: pointer;
-  }
-
-  .menu-icon span {
-    display: block;
-    width: 30px;
-    height: 3px;
-    background-color: #333333; /* Cor das barras */
-    transition: all 0.3s ease-in-out;
-  }
-
-  /* * A MÁGICA ACONTECE AQUI:
-   * Quando a caixa de seleção está marcada (clicada),
-   * o menu de navegação (nav) que é seu "irmão" no HTML se torna visível.
-   */
-  .menu-toggle:checked ~ nav {
-    display: block;
-  }
-
-  /* Animação opcional: transforma o ícone em um "X" quando o menu está aberto */
-  .menu-toggle:checked ~ .menu-icon span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  .menu-toggle:checked ~ .menu-icon span:nth-child(2) {
-    opacity: 0;
-  }
-  .menu-toggle:checked ~ .menu-icon span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
-  }
+    .footer-section {
+        flex-basis: 100%;
+        width: 100%;
+        align-items: center;
+    }
 }
