@@ -1,140 +1,153 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* Fundo e fonte */
+body {
+    font-family: sans-serif;
+    background: url('../images/fundo.png') no-repeat center center fixed;
+    background-size: cover;
+    color: black;
+    min-height: 100vh;
+}
+
+
+/* Cabeçalho */
 .header-content {
-  display: flex;
-  align-items: center;
-  gap: 45px; 
-  width: 100%;
-  padding: 10px 0x; 
-}
-.menu {
-  display: flex;
-  gap: 35px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    max-width: 1200px;     /* Novo */
+    margin: 0 auto;        /* Novo */
 }
 
+
+.logo img {
+    max-width: 250px;
+    height: auto;
+}
+
+/* Menu */
 nav ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 35px; 
- 
-}
-
-nav ul li {
-  margin: 0; 
+    display: flex;
+    list-style: none;
+    gap: 35px;
 }
 
 nav ul li a {
-  font-family: "Special Gothic Expanded One", sans-serif;
-  font-size: 18px;
-  color: #333333;
-  text-decoration: none;
-  position: relative;
-  font-weight: bold;
-  display: inline-block;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-
-nav ul li a::after,
-nav ul li a::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(to right, saddlebrown, #5d3b3b);
-  left: 0;
-  transform: scaleX(0);
-  transition: transform 0.4s ease-out;
+nav ul li a:hover {
+    color: #5d3b3b;
 }
 
-nav ul li a::after {
-  bottom: -5px;
-  transform-origin: right;
-}
-
-nav ul li a::before {
-  top: -5px;
-  transform-origin: left;
-}
-
-nav ul li a:hover::after,
-nav ul li a:hover::before {
-  transform: scaleX(1);
-}
-
-
-
-body {
-    font-family: 'Italiana', serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-.container {
-    max-width: 700px;
-    width: 90%;
-    margin: 40px auto;
+/* Título centralizado */
+.titulo-pagina {
     text-align: center;
+    margin-top: 40px;
 }
-.titulo {
-    font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    letter-spacing: 5px; 
+
+.titulo-pagina h2 {
+    font-family: 'Italiana', serif;
+    font-size: 36px;
+    color: #333;
     margin-bottom: 20px;
 }
-.h2 {
-   font-family: 'Italiana', serif;
-    font-size: 40px; 
-    align-items: center;
-}
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-    max-width: 800px;
+
+/* Formulário */
+.container {
+    max-width: 600px;
+    margin: 20px auto 60px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
 }
 
 .bloco {
-    background-color: #e2e2e2; 
-    border: none;
-    align-items: center;
+    width: calc(100% - 20px);
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 12px;
     font-size: 16px;
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 700px;
+    background-color: white;
+    color: black;
 }
 
 textarea.bloco {
-    height: 120px;
     resize: vertical;
+    min-height: 120px;
+    background-color: white;
+    color: black;
 }
 
+.bloco::placeholder {
+    color: #666;
+}
+
+/* Botão */
 .enviar-btn {
-  width: 250px; 
-  background-color: #5C2A2A;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  text-transform: uppercase;
-  cursor: pointer;
-  margin-top: 10px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto; 
+    background-color: #5d3b3b;
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-
 
 .enviar-btn:hover {
-  background-color: #7a3b3b; 
+    background-color: #7a4e4e;
 }
 
+/* Responsivo */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
+    .menu-icon {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .menu-icon span {
+        width: 30px;
+        height: 3px;
+        background-color: #333;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .menu-toggle:checked ~ nav {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        padding: 1rem 0;
+    }
+
+    nav ul li a {
+        padding: 1rem;
+    }
+}
