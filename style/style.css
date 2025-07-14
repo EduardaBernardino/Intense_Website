@@ -16,6 +16,7 @@ body {
     min-height: 100vh;
 }
 
+
 /* Cabeçalho */
 .header-content {
     display: flex;
@@ -92,6 +93,11 @@ nav ul li a:hover::before {
     color: #333;
     margin-bottom: 20px;
 }
+/* Ajustes específicos para a página profissionais */
+body.profissionais {
+    padding: 0; /* Elimina padding lateral que pode desalinha os cards */
+}
+
 
 /* --- Media Queries GERAIS para Responsividade (copie as regras unificadas que funcionam para todas as páginas) --- */
 
