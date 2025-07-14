@@ -1,71 +1,25 @@
-
-
-body {
-    font-family: 'Italiana', serif;
+.sessao-conteudo {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: #987676;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px;
 }
 
-.titulo {
+.imagemSobre img {
+    max-width: 350px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.subtitulo {
     font-family: 'Playfair Display', serif;
-    font-size: 50px;
-    letter-spacing: 5px;
-    margin-bottom: 30px;
-    text-align: center;
+    font-size: 42px;
     color: white;
-    font-weight: 300;
-}
-
-
-        .container-cards {
-            display: flex;
-            flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha em telas menores */
-            gap: 40px; /* Espaçamento entre os cards */
-            justify-content: center; /* Centraliza os cards no container */
-        }
-
-.card-usuario {
-    background-color: #D9D9D9;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 29px;
     text-align: center;
-    width: 220px;
-    height: 455px; /* Mantém a altura fixa */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    letter-spacing: 4px;
 }
-
-
-.card-usuario:hover {
-            transform: translateY(-5px); /* Eleva o card levemente */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
-        }
-
-        .card-usuario .imagem-usuario {
-            width: 120px; /* Tamanho da imagem */
-            height: 120px; /* Tamanho da imagem */
-            border-radius: 50%; /* Transforma a imagem em um círculo */
-            object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
-            margin-bottom: 15px;
-            border: 3px solid #eee; /* Borda sutil na imagem */
-        }
-
-        .card-usuario .nome-usuario {
-            font-size: 1.2em;
-            font-weight: bold;
-            color: #333;
-            margin: 0;
-             margin-bottom: 8px;
-        }
-.texto-usuario {
-            font-size: 0.9em;
-            color: #666;
-            margin-top: 0;
-            text-align: left; /* Alinha o texto à esquerda */
-            text-align: justify;
-        }
-
-
