@@ -1,4 +1,3 @@
-
 .subtitulo {
     font-family: 'Playfair Display', serif;
     font-size: 42px;
@@ -61,14 +60,34 @@
     text-align: justify;
 }
 
+/* ====== RESPONSIVO MOBILE ====== */
 @media (max-width: 768px) {
-    .card-usuario {
-        width: 100%;
-        max-width: 300px;
-        height: auto;
+    .container-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 20px;
     }
 
-    .container-cards {
+    .card-usuario {
+        width: 90%;
+        max-width: 320px;
+        height: auto;
         padding: 20px;
+    }
+
+    .imagem-usuario {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 12px;
+    }
+
+    .nome-usuario {
+        font-size: 1.1em;
+    }
+
+    .texto-usuario {
+        font-size: 0.95em;
+        text-align: justify;
     }
 }
