@@ -50,10 +50,11 @@ header {
 nav ul.menu {
   display: flex;
   list-style: none;
-  margin: 0;
+  margin: 0;        /* Removido: margin-top: -50px */
   padding: 0;
   gap: 35px;
 }
+
 
 
 nav ul.menu li a {
@@ -449,11 +450,14 @@ footer > p {
 
   /* Cabeçalho - Ajuste para menu hambúrguer */
   .header-content {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 15px 10px;
-    margin-top: 0;
+    display: flex;
+    justify-content: space-between; /* Corrigido: alinha a logo à esquerda e o menu à direita */
+    align-items: center;
+    width: 100%;
+    padding: 27px 40px;
+    gap: 35px;
   }
+
 
   .header-content .logo img {
     max-width: 120px;
