@@ -68,34 +68,31 @@ body.profissionais {
 
 /* Responsivo para mobile */
 @media (max-width: 768px) {
-    .container-cards {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-        padding: 20px;
+    .card-usuario .imagem-usuario {
+        width: 100px !important;
+        height: 100px !important;
+        object-fit: cover;
+        margin-bottom: 12px;
+        border-radius: 50%;
+        border: 3px solid #eee;
     }
 
     .card-usuario {
-        width: 90%;
-        max-width: 300px;
+        max-width: 320px !important;
+        width: 90% !important;
+        height: auto !important;
         padding: 20px;
     }
 
-    .imagem-usuario {
-        width: 100px;
-        height: 100px;
-    }
-
-    .nome-usuario {
-        font-size: 1.1em;
+    .container-cards {
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
     }
 
     .texto-usuario {
         font-size: 0.95em;
-    }
-
-    .titulo {
-        font-size: 1.8rem;
-        padding: 0 20px;
+        text-align: justify;
     }
 }
