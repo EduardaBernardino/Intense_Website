@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Agende Sua Consulta</title>
-    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style/main.css">
-    <link rel="stylesheet" href="style/avaliacao.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/avaliacao.css" />
 </head>
 <body>
 
 <header>
     <div class="header-content">
         <div class="logo">
-            <img src="images/logo.png" alt="Logo Intense">
+            <img src="images/logo.png" alt="Logo Intense" />
         </div>
 
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
         <label for="menu-toggle" class="menu-icon">
             <span></span>
             <span></span>
@@ -37,22 +37,18 @@
 </header>
 
 <div class="titulo-pagina">
-    <h2>Agende Sua Consulta</h2><br>
+    <h2>Agende Sua Consulta</h2><br />
 </div>
 
 <div class="container">
-    <form action="enviado.html" method="post">
-        <form name="agendamento" method="POST" data-netlify="true" action="enviado.html">
-            <input type="hidden" name="form-name" value="agendamento">
-            <input type="text" id="nome" name="nome" placeholder="Nome:" class="bloco" required autocomplete="name">
-            <input type="tel" id="telefone" name="telefone" placeholder="Telefone:" class="bloco" required autocomplete="tel">
-            <input type="email" id="email" name="email" placeholder="Email:" class="bloco" required autocomplete="email">
-            <textarea id="mensagem" name="mensagem" placeholder="Envie sua mensagem" class="bloco" required></textarea>
-            <button type="submit" class="enviar-btn">ENVIAR</button>
-        </form>
+    <form name="agendamento" method="POST" data-netlify="true" action="enviado.html">
+        <input type="hidden" name="form-name" value="agendamento" />
 
-
-
+        <input type="text" id="nome" name="nome" placeholder="Nome:" class="bloco" required autocomplete="name" />
+        <input type="tel" id="telefone" name="telefone" placeholder="Telefone:" class="bloco" required autocomplete="tel" />
+        <input type="email" id="email" name="email" placeholder="Email:" class="bloco" required autocomplete="email" />
+        <textarea id="mensagem" name="mensagem" placeholder="Envie sua mensagem" class="bloco" required></textarea>
+        <button type="submit" class="enviar-btn">ENVIAR</button>
     </form>
 </div>
 
