@@ -32,13 +32,13 @@ header {
 
 .header-content {
   display: flex;
-  justify-content: space-between; /* Alinha ao centro em desktop */
+  justify-content: space-between; /* Alinha logo à esquerda e menu à direita */
   align-items: center;
   width: 100%;
-  padding: 27px 0;
-  gap: 35px; /* Espaço entre a logo e o menu */
-  margin-top: -50px; /* Consolidado aqui, se necessário */
+  padding: 27px 40px; /* Adiciona espaçamento lateral */
+  gap: 35px;
 }
+
 
 .header-content .logo img {
   max-width: 180px; /* Tamanho da logo em desktop */
@@ -52,9 +52,9 @@ nav ul.menu {
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 35px; /* Espaço entre os itens do menu */
-  margin-top: -50px; /* Consolidado aqui, se necessário */
+  gap: 35px;
 }
+
 
 nav ul.menu li a {
   font-family: "Special Gothic Expanded One", sans-serif; /* Assumindo que esta fonte está carregada */
