@@ -1,25 +1,25 @@
+/* ======================== */
+/* CSS - Página de Enviado */
+/* ======================== */
 
-
-
-
-
+/* Estilo do corpo da página */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #fff;
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
 }
 
+/* Centraliza a mensagem na tela */
 .mensagem-container {
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  padding: 20px;
 }
 
-
+/* Estilo da mensagem */
 .mensagem {
   font-size: 40px;
   color: #000;
@@ -27,7 +27,10 @@ body {
   font-weight: 600;
   text-align: center;
 }
-/* --- Estilos para o Menu Hambúrguer --- */
+
+/* ============================== */
+/* Estilos para Menu Responsivo  */
+/* ============================== */
 
 .menu-toggle {
   display: none;
@@ -56,14 +59,14 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
 
-  header nav ul, .menu {
+  header nav ul.menu {
     flex-direction: column;
     width: 100%;
     padding: 1rem 0;
-    gap: 0; /* Remove o gap para o menu dropdown */
+    gap: 0;
   }
 
-  header nav ul li a {
+  header nav ul.menu li a {
     padding: 1rem;
     width: 100%;
     display: block;
@@ -71,7 +74,7 @@ body {
     border-bottom: 1px solid #f0f0f0;
   }
 
-  header nav ul li:last-child a {
+  header nav ul.menu li:last-child a {
     border-bottom: none;
   }
 
@@ -97,10 +100,27 @@ body {
   .menu-toggle:checked ~ .menu-icon span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
+
   .menu-toggle:checked ~ .menu-icon span:nth-child(2) {
     opacity: 0;
   }
+
   .menu-toggle:checked ~ .menu-icon span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -6px);
   }
+}
+.btn-voltar {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 30px;
+  background-color: #65342c;
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-voltar:hover {
+  background-color: #7a4e4e;
 }

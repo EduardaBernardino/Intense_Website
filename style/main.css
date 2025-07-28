@@ -624,3 +624,17 @@ footer > p {
     padding: 10px;
   }
 }
+.footer-section.social div {
+  color: white;
+}
+
+.footer-section.social a,
+.footer-section.social span {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-section.social a:hover {
+  text-decoration: underline;
+}

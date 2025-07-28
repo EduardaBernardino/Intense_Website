@@ -9,7 +9,9 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background-color: #987676;
+    background: url('../images/fundo.png') no-repeat center center fixed;
+    background-size: cover;
+
 }
 
 /* Título */

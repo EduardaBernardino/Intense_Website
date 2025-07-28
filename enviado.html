@@ -1,43 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Mensagem</title>
-    <link rel="stylesheet" href="style/main.css">
+    <meta charset="UTF-8">
+    <title>Mensagem enviada</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style/main.css"> <!-- Estilo principal com menu -->
     <link rel="stylesheet" href="style/enviado.css"> <!-- Estilo da mensagem -->
+
+    <!-- Fontes -->
     <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-  <div class="header-content">
-    <div class="logo">
-      <img src="images/logo.png" alt="Logo Intense">
-    </div>
 
-    <input type="checkbox" id="menu-toggle" class="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-    <nav>
-      <ul class="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="sobre.html">Sobre Nós</a></li>
-        <li><a href="profissionais.html">Profissionais</a></li>
-        <li><a href="tratamentos.html">Tratamentos</a></li>
-        <li><a href="depoimentos.html">Depoimentos</a></li>
-        <li><a href="avaliacao.html" class="botao">Agende Sua Consulta</a></li>
-      </ul>
-    </nav>
-  </div>
+<!-- Cabeçalho com Menu -->
+<header>
+    <div class="header-content">
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo Intense">
+        </div>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="profissionais.html">Profissionais</a></li>
+                <li><a href="tratamentos.html">Tratamentos</a></li>
+                <li><a href="depoimentos.html">Depoimentos</a></li>
+                <li><a href="avaliacao.html" class="botao">Agende Sua Consulta</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
+<!-- Conteúdo principal -->
 <main class="mensagem-container">
-  <div class="mensagem">
-    Mensagem enviada com sucesso!
-  </div>
+    <div class="mensagem">
+        Mensagem enviada com sucesso!<br><br>
+        <a href="index.html" class="btn-voltar">Voltar para Home</a>
+    </div>
 </main>
 
 </body>
