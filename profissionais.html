@@ -1,57 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profissionais</title>
-    <link rel="stylesheet" href="style/profissionais.css">
-    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/profissionais.css" />
 </head>
 <body>
 <header>
-  <div class="header-content">
-    <div class="logo">
-      <img src="images/logo.png" alt="Logo Intense">
-    </div>
+    <div class="header-content">
+        <!-- Logo à esquerda -->
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo Intense" />
+        </div>
 
-    <input type="checkbox" id="menu-toggle" class="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-    <nav>
-      <ul class="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="sobre.html">Sobre Nós</a></li>
-        <li><a href="profissionais.html">Profissionais</a></li>
-        <li><a href="tratamentos.html">Tratamentos</a></li>
-        <li><a href="depoimentos.html">Depoimentos</a></li>
-        <li><a href="avaliacao.html" class="botao">Agende Sua Consulta</a></li>
-      </ul>
-    </nav>
-  </div>
+        <!-- Menu Hambúrguer (mobile) -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- Navegação -->
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="profissionais.html">Profissionais</a></li>
+                <li><a href="tratamentos.html">Tratamentos</a></li>
+                <li><a href="depoimentos.html">Depoimentos</a></li>
+                <li><a href="avaliacao.html" class="botao">Agende Sua Consulta</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
-    <h2 class="titulo">Profissionais</h2>
-    <div class="container-cards">
-        <div class="card-usuario">
-            <img src="images/guilherme.png" alt="Foto do Usuário 1" class="imagem-usuario">
-            <p class="nome-usuario">Dr. Guilherme</p>
-            <p class="texto-usuario">Nascido e criado em Brasília, me formei na UCB e logo em sequência iniciei minha especialização no Instituto Premier. Como especialista nas áreas de prótese dentária e implantodontia, o que mais amo é poder transformar a vida de pessoas reabilitando sorrisos, tanto em função quanto em estética!</p>
-        </div>
 
-        <div class="card-usuario">
-            <img src="images/felipe.png" alt="Foto do Usuário 2" class="imagem-usuario">
-            <p class="nome-usuario">Dr. Felipe</p>
-            <p class="texto-usuario">Nascido em Posse - GO, me mudei para Brasília para cursar odontologia na UCB. Logo depois, segui a minha jornada profissional ao ingressar na especialização em Endodontia pela Associação Brasileira de Odontologia.</p>
-        </div>
+<!-- Título da seção -->
+<h2 class="titulo">Profissionais</h2>
 
-        <div class="card-usuario">
-            <img src="images/bruno.png" alt="Foto do Usuário 3" class="imagem-usuario">
-            <p class="nome-usuario">Dr. Bruno</p>
-            <p class="texto-usuario">Nascido no interior de Minas Gerais, vim para Brasília cursar odontologia na UCB. Mesmo antes de me formar, já fazia alguns cursos para aprimorar cada vez mais meus atendimentos e conhecimentos.Sou especialista em implantodontia e disfunção da articulação temporomandibular (atm).</p>
-        </div>
+<!-- Cards dos profissionais -->
+<div class="container-cards">
+    <div class="card-usuario">
+        <img src="images/guilherme.png" alt="Foto do Dr. Guilherme" class="imagem-usuario" />
+        <p class="nome-usuario">Dr. Guilherme</p>
+        <p class="texto-usuario">
+            Nascido e criado em Brasília, me formei na UCB e logo em sequência iniciei minha especialização no Instituto Premier. Como especialista nas áreas de prótese dentária e implantodontia, o que mais amo é poder transformar a vida de pessoas reabilitando sorrisos, tanto em função quanto em estética!
+        </p>
     </div>
 
+    <div class="card-usuario">
+        <img src="images/felipe.png" alt="Foto do Dr. Felipe" class="imagem-usuario" />
+        <p class="nome-usuario">Dr. Felipe</p>
+        <p class="texto-usuario">
+            Nascido em Posse - GO, me mudei para Brasília para cursar odontologia na UCB. Logo depois, segui a minha jornada profissional ao ingressar na especialização em Endodontia pela Associação Brasileira de Odontologia.
+        </p>
+    </div>
 
+    <div class="card-usuario">
+        <img src="images/bruno.png" alt="Foto do Dr. Bruno" class="imagem-usuario" />
+        <p class="nome-usuario">Dr. Bruno</p>
+        <p class="texto-usuario">
+            Nascido no interior de Minas Gerais, vim para Brasília cursar odontologia na UCB. Mesmo antes de me formar, já fazia alguns cursos para aprimorar cada vez mais meus atendimentos e conhecimentos. Sou especialista em implantodontia e disfunção da articulação temporomandibular (ATM).
+        </p>
+    </div>
+</div>
 </body>
 </html>

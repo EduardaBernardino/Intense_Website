@@ -29,7 +29,7 @@ html, body {
 .subtitulo {
   color: #a67c00; /* dourado */
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 3rem;
   margin: 0;
   text-transform: uppercase;
   margin-bottom: 30px;
@@ -97,7 +97,7 @@ html, body {
   }
 
   .titulo {
-    font-size: 2rem; /* Reduzir tamanho do título */
+    font-size: 7rem; /* Reduzir tamanho do título */
   }
 
   .textoSobre p {
@@ -112,7 +112,7 @@ html, body {
   }
 
   .subtitulo {
-    font-size: 1rem; /* Diminuir o tamanho do subtítulo */
+    font-size: 1.8rem; /* Diminuir o tamanho do subtítulo */
     margin-bottom: 20px;
     align-self: center; /* Centralizar o subtítulo em mobile */
   }
@@ -134,7 +134,7 @@ html, body {
   }
 
   .titulo {
-    font-size: 1.8rem; /* Reduzir ainda mais o tamanho do título */
+    font-size: 2rem; /* Reduzir ainda mais o tamanho do título */
     text-align: center; /* Centralizar o título em mobile */
     margin-bottom: 15px;
   }

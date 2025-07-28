@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* Fundo e fonte */
+/* Fonte e fundo */
 body {
     font-family: sans-serif;
     background: url('../images/fundo.png') no-repeat center center fixed;
@@ -14,53 +14,43 @@ body {
     min-height: 100vh;
 }
 
-
-/* Cabeçalho */
+/* Header */
 .header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 40px;
-    max-width: 1200px;     /* Novo */
-    margin: 0 auto;        /* Novo */
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1001;
 }
-
 
 .logo img {
     max-width: 250px;
     height: auto;
 }
 
-/* Menu */
-nav ul {
+/* Menu Desktop */
+nav {
+    display: block;
+}
+
+.menu {
     display: flex;
     list-style: none;
     gap: 35px;
 }
 
-nav ul li a {
-    font-family: sans-serif;
+.menu li a {
     font-size: 16px;
+    font-weight: bold;
     color: #333;
     text-decoration: none;
-    font-weight: bold;
 }
 
-nav ul li a:hover {
+.menu li a:hover {
     color: #5d3b3b;
-}
-
-/* Título centralizado */
-.titulo-pagina {
-    text-align: center;
-    margin-top: 40px;
-}
-
-.titulo-pagina h2 {
-    font-family: 'Italiana', serif;
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 20px;
 }
 
 /* Formulário */
@@ -70,7 +60,7 @@ nav ul li a:hover {
     padding: 30px;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
@@ -88,8 +78,6 @@ nav ul li a:hover {
 textarea.bloco {
     resize: vertical;
     min-height: 120px;
-    background-color: white;
-    color: black;
 }
 
 .bloco::placeholder {
@@ -112,11 +100,34 @@ textarea.bloco {
     background-color: #7a4e4e;
 }
 
-/* Responsivo */
+/* Acessibilidade */
+.visually-hidden {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* MENU HAMBÚRGUER - MOBILE */
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
 @media (max-width: 768px) {
     .header-content {
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .logo img {
+        max-width: 120px;
     }
 
     .menu-icon {
@@ -124,30 +135,76 @@ textarea.bloco {
         flex-direction: column;
         gap: 5px;
         cursor: pointer;
+        z-index: 1001;
     }
 
     .menu-icon span {
-        width: 30px;
+        display: block;
+        width: 25px;
         height: 3px;
         background-color: #333;
+        transition: all 0.3s ease;
     }
 
     nav {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        gap: 0;
+    }
+
+    .menu li a {
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 16px;
     }
 
     .menu-toggle:checked ~ nav {
         display: block;
     }
 
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        background-color: white;
-        padding: 1rem 0;
+    .menu-toggle:checked ~ .menu-icon span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
     }
 
-    nav ul li a {
-        padding: 1rem;
+    .menu-toggle:checked ~ .menu-icon span:nth-child(2) {
+        opacity: 0;
     }
+
+    .menu-toggle:checked ~ .menu-icon span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+.menu {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    gap: 0;
+}
+
+.menu li a {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none; /* <- Remover sublinhado */
+}
+
+.menu li:last-child a {
+    border-bottom: none;
 }

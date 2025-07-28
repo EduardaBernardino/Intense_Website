@@ -1,5 +1,8 @@
+/* ========================== */
+/* CSS — Profissionais       */
+/* ========================== */
 
-
+/* Estilo base da página de profissionais */
 body {
     font-family: 'Italiana', serif;
     display: flex;
@@ -9,6 +12,7 @@ body {
     background-color: #987676;
 }
 
+/* Título */
 .titulo {
     font-family: 'Playfair Display', serif;
     font-size: 50px;
@@ -19,14 +23,15 @@ body {
     font-weight: 300;
 }
 
+/* Container dos cards */
+.container-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
 
-        .container-cards {
-            display: flex;
-            flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha em telas menores */
-            gap: 40px; /* Espaçamento entre os cards */
-            justify-content: center; /* Centraliza os cards no container */
-        }
-
+/* Estilo dos cards */
 .card-usuario {
     background-color: #D9D9D9;
     border-radius: 15px;
@@ -34,38 +39,81 @@ body {
     padding: 29px;
     text-align: center;
     width: 220px;
-    height: 455px; /* Mantém a altura fixa */
+    height: 455px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
 .card-usuario:hover {
-            transform: translateY(-5px); /* Eleva o card levemente */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
-        }
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 
-        .card-usuario .imagem-usuario {
-            width: 120px; /* Tamanho da imagem */
-            height: 120px; /* Tamanho da imagem */
-            border-radius: 50%; /* Transforma a imagem em um círculo */
-            object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
-            margin-bottom: 15px;
-            border: 3px solid #eee; /* Borda sutil na imagem */
-        }
+.card-usuario .imagem-usuario {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #eee;
+}
 
-        .card-usuario .nome-usuario {
-            font-size: 1.2em;
-            font-weight: bold;
-            color: #333;
-            margin: 0;
-             margin-bottom: 8px;
-        }
+.card-usuario .nome-usuario {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 8px 0;
+}
+
 .texto-usuario {
-            font-size: 0.9em;
-            color: #666;
-            margin-top: 0;
-            text-align: left; /* Alinha o texto à esquerda */
-            text-align: justify;
-        }
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 0;
+    text-align: justify;
+}
 
+/* ========================== */
+/* Media Queries              */
+/* ========================== */
 
+/* Tablets */
+@media (max-width: 1024px) {
+    .container-cards {
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    .card-usuario {
+        width: 45%;
+        height: auto;
+        padding: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .container-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card-usuario {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .card-usuario .imagem-usuario {
+        width: 100px;
+        height: 100px;
+    }
+
+    .texto-usuario {
+        font-size: 0.85em;
+    }
+
+    .titulo {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+}
