@@ -447,29 +447,24 @@ footer > p {
     padding: 0 5px;
   }
 
-  /* Cabeçalho - Logo à esquerda, menu à direita */
+  /* Cabeçalho - Ajuste para menu hambúrguer */
   .header-content {
     flex-direction: row;
-    justify-content: space-between; /* Logo à esquerda, menu à direita */
-    align-items: center;
+    justify-content: space-between;
     padding: 15px 10px;
     margin-top: 0;
-  }
-
-  .header-content .logo {
-    order: 0;
   }
 
   .header-content .logo img {
     max-width: 120px;
   }
 
+  /* Estilos do Menu Hambúrguer */
   .menu-icon {
     display: flex;
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
-    order: 1;
   }
 
   .menu-icon span {
@@ -479,6 +474,7 @@ footer > p {
     background-color: #333333;
     transition: all 0.3s ease-in-out;
   }
+
   /* Esconde a navegação normal */
   header nav {
     display: none;
