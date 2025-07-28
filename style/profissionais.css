@@ -1,16 +1,15 @@
-/* ========================== */
-/* CSS — Profissionais       */
-/* ========================== */
+html, body {
+    height: 100%;
+}
 
-/* Estilo base da página de profissionais */
 body {
     font-family: 'Italiana', serif;
-    display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
     background: url('../images/fundo.png') no-repeat center center fixed;
     background-size: cover;
+    min-height: 100vh;
 
 }
 
