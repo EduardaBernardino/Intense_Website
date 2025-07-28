@@ -1,54 +1,42 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agende Sua Consulta</title>
+    <title>Avaliação</title>
     <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="style/avaliacao.css"/>
 </head>
 <body>
-
-<header>
-    <div class="header-content">
-        <div class="logo">
-            <img src="images/logo.png" alt="Logo Intense">
+    <header>
+        <div class="header-content">
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="profissionais.html">Profissionais</a></li>
+                    <li><a href="tratamentos.html">Tratamentos</a></li>
+                    <li><a href="depoimentos.html">Depoimentos</a></li>
+                    <li><a href="avaliacao.html" class="botao">Agende Sua Consulta</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
+    <div class="container">
+        <h2>Agende Sua Consulta</h2>
+        <form action="enviado.html" method="post">
+            <label for="nome" class="visually-hidden"></label>
+            <input type="text" id="nome" name="nome" placeholder="Nome:" class="bloco" required autocomplete="name" />
+            <label for="nome" class="visually-hidden"></label>
+            <input type="tel" id="telefone" name="telefone" placeholder="Telefone:" class="bloco" required autocomplete="tel" />
+            <label for="nome" class="visually-hidden"></label>
+            <input type="email" id="email" name="email" placeholder="Email:" class="bloco" required autocomplete="email" />
+            <textarea id="mensagem" name="mensagem" placeholder="Envie sua mensagem" class="bloco" required></textarea>
 
-        <nav>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sobre.html">Sobre Nós</a></li>
-                <li><a href="profissionais.html">Profissionais</a></li>
-                <li><a href="tratamentos.html">Tratamentos</a></li>
-                <li><a href="depoimentos.html">Depoimentos</a></li>
-                <li><a href="avaliacao.html" class="botao">Agende Sua Consulta</a></li>
-            </ul>
-        </nav>
+            <button type="submit" class="enviar-btn">ENVIAR</button>
+        </form>
     </div>
-</header>
-
-<div class="titulo-pagina">
-    <h2>Agende Sua Consulta</h2><br>
-</div>
-
-<div class="container">
-    <form action="enviado.html" method="post">
-        <input type="text" id="nome" name="nome" placeholder="Nome:" class="bloco" required autocomplete="name">
-        <input type="tel" id="telefone" name="telefone" placeholder="Telefone:" class="bloco" required autocomplete="tel">
-        <input type="email" id="email" name="email" placeholder="Email:" class="bloco" required autocomplete="email">
-        <textarea id="mensagem" name="mensagem" placeholder="Envie sua mensagem" class="bloco" required></textarea>
-        <button type="submit" class="enviar-btn">ENVIAR</button>
-    </form>
-</div>
-
 </body>
 </html>
