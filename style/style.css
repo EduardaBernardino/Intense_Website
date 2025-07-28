@@ -1,5 +1,3 @@
-/* style/main.css */
-
 /* Reset */
 * {
     margin: 0;
@@ -7,12 +5,11 @@
     box-sizing: border-box;
 }
 
-/* Fundo e fonte GERAL para o site */
 body {
     font-family: sans-serif;
     background: url('../images/fundo.png') no-repeat center center fixed;
     background-size: cover;
-    color: black; /* Cor do texto padrão para o site */
+    color: black;
     min-height: 100vh;
 }
 
@@ -20,11 +17,11 @@ body {
 .header-content {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Mantém logo esquerda, menu direita */
+    justify-content: space-between;
     padding: 10px 40px;
     max-width: 1200px;
-    margin: 0 auto; /* Centraliza o conteúdo do cabeçalho */
-    /* REMOVA margin-top: -50px; daqui se houver */
+    margin: 0 auto;
+    position: relative;
 }
 
 .logo img {
@@ -32,27 +29,23 @@ body {
     height: auto;
 }
 
-/* Menu de Navegação */
+/* Menu */
 nav ul {
     display: flex;
     list-style: none;
     gap: 35px;
-    margin: 0; /* Garante que não tenha margem negativa */
-    padding: 0;
-    /* REMOVA margin-top: -50px; daqui se houver */
 }
 
 nav ul li a {
-    font-family: "Special Gothic Expanded One", sans-serif; /* Mantenha essa fonte se for a global do menu */
+    font-family: "Special Gothic Expanded One", sans-serif;
     font-size: 18px;
     color: #333333;
     text-decoration: none;
     position: relative;
     font-weight: bold;
-    display: inline-block;
 }
 
-/* NOVO ESTILO DE HOVER COM DUAS LINHAS (Se for para todo o site) */
+/* Efeito hover */
 nav ul li a::after,
 nav ul li a::before {
     content: '';
@@ -80,105 +73,21 @@ nav ul li a:hover::before {
     transform: scaleX(1);
 }
 
-/* Título centralizado (se for um estilo para TODOS os títulos de página) */
-.titulo-pagina {
-    text-align: center;
-    margin-top: 40px;
-}
-
-.titulo-pagina h2 {
-    font-family: 'Italiana', serif;
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-/* --- Media Queries GERAIS para Responsividade (copie as regras unificadas que funcionam para todas as páginas) --- */
-
-/* ---- Tablet (até 1024px) ---- */
-@media (max-width: 1024px) {
-    body {
-        font-size: 90%;
-        padding: 0 15px; /* Adiciona padding lateral para evitar que o conteúdo cole nas bordas */
-    }
-
-    .header-content {
-        padding: 15px 20px;
-        flex-direction: column; /* Em tablets, pode empilhar logo e menu se preferir, ou manter lado a lado se houver espaço */
-        gap: 20px;
-        align-items: center;
-    }
-
-    .logo img {
-        max-width: 200px;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 25px;
-        margin-top: 0;
-    }
-
-    nav ul li a {
-        font-size: 16px;
-    }
-
-    /* Outras regras gerais para tablet */
-    .container { /* ESTE AQUI PODE SER AJUSTADO EM AVALIACAO.CSS SE PRECISAR SER DIFERENTE */
-        padding: 0 2rem;
-    }
-}
-
-/* --- Estilos para o Menu Hambúrguer (COPIE ESTE BLOCO INTEIRO PARA O main.css se for geral) --- */
-/* Esconde a caixa de seleção (será usada apenas para controle de estado) */
+/* Menu mobile */
 .menu-toggle {
     display: none;
 }
 
-/* O ícone do menu (label) é escondido por padrão em telas maiores */
 .menu-icon {
     display: none;
 }
 
-/* ---- Celular (até 768px) ---- */
 @media (max-width: 768px) {
-    /* Alinha o logo à esquerda e o ícone à direita */
     .header-content {
-        flex-direction: row; /* Logo e hambúrguer lado a lado */
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        padding: 1rem;
         position: relative;
-    }
-
-    header nav {
-        display: none; /* Menu escondido por padrão */
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #ffffff;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        z-index: 1000; /* Garante que o menu fique sobre outros elementos */
-    }
-
-    header nav ul, .menu {
-        flex-direction: column;
-        width: 100%;
-        padding: 1rem 0;
-    }
-
-    header nav ul li a {
         padding: 1rem;
-        width: 100%;
-        display: block;
-        text-align: center;
-        border-bottom: 1px solid #f0f0f0;
-    }
-
-    header nav ul li:last-child a {
-        border-bottom: none;
     }
 
     .menu-icon {
@@ -186,14 +95,47 @@ nav ul li a:hover::before {
         flex-direction: column;
         gap: 5px;
         cursor: pointer;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .menu-icon span {
         display: block;
         width: 30px;
         height: 3px;
-        background-color: #333333;
+        background-color: #333;
         transition: all 0.3s ease-in-out;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+
+    nav ul li a {
+        padding: 1rem;
+        display: block;
+        text-align: center;
+        border-bottom: 1px solid #f0f0f0;
     }
 
     .menu-toggle:checked ~ nav {
@@ -203,34 +145,29 @@ nav ul li a:hover::before {
     .menu-toggle:checked ~ .menu-icon span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
+
     .menu-toggle:checked ~ .menu-icon span:nth-child(2) {
         opacity: 0;
     }
+
     .menu-toggle:checked ~ .menu-icon span:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
     }
-
-    /* Outras regras gerais para celular */
 }
 
-/* Adicione aqui qualquer outro estilo GERAL do site que você tinha */
-
-/* --- Rodapé (se é o mesmo para todas as páginas) --- */
+/* Footer (mantém seu estilo existente, se já estiver funcionando) */
 .footer-container {
     background-color: #7e5b5b;
     color: white;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding:20px;
-    margin-top: 90px; /* Ajuste se necessário */
+    padding: 20px;
+    margin-top: 90px;
     gap: 30px;
 }
 
-/* ... (resto do seu footer CSS) ... */
-
 @media (max-width: 1024px) {
-    /* Ajustes específicos do footer para tablet */
     .footer-container {
         flex-wrap: wrap;
         justify-content: center;
@@ -244,7 +181,6 @@ nav ul li a:hover::before {
 }
 
 @media (max-width: 768px) {
-    /* Ajustes específicos do footer para celular */
     .footer-container {
         flex-direction: column;
         align-items: center;
