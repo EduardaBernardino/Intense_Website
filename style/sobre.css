@@ -53,7 +53,7 @@ html, body {
   justify-content: center;
   align-items: center;
   /* Garante que o contêiner da imagem não seja muito grande, mantendo a proporção */
-  max-width: 400px;
+  max-width: 350px;
   width: 100%; /* Permite que o div imagemSobre seja responsivo */
 }
 
@@ -64,7 +64,7 @@ html, body {
 
 .titulo {
   font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin: 0 0 20px;
   color: #2c2c2c;
   text-align: left; /* Título alinhado à esquerda por padrão no desktop */
