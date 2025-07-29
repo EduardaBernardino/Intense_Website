@@ -1,3 +1,8 @@
+/* ========================== */
+/* CSS — Profissionais       */
+/* ========================== */
+
+/* Reset e base */
 * {
     margin: 0;
     padding: 0;
@@ -6,17 +11,15 @@
 
 html, body {
     height: 100%;
+    width: 100%;
     background-color: transparent;
+    overflow-x: hidden;
 }
-
 
 body {
     font-family: 'Italiana', serif;
-    margin: 0;
-    padding: 0;
     background: url('../images/fundo.png') no-repeat center center fixed;
     background-size: cover;
-    background-color: transparent;
     min-height: 100vh;
 }
 
@@ -26,7 +29,7 @@ body {
     font-family: 'Playfair Display', serif;
     font-size: 50px;
     letter-spacing: 5px;
-    margin-bottom: 30px;
+    margin: 40px 0 30px;
     text-align: center;
     color: white;
     font-weight: 300;
@@ -38,6 +41,7 @@ body {
     flex-wrap: wrap;
     gap: 40px;
     justify-content: center;
+    padding-bottom: 40px; /* evita corte em telas baixas */
 }
 
 /* Estilo dos cards */
@@ -123,11 +127,6 @@ body {
 
     .titulo {
         font-size: 36px;
-        margin-bottom: 20px;
+        margin: 30px 0 20px;
     }
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
